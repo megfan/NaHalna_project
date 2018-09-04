@@ -1,0 +1,16 @@
+.section-about{
+  background-color: $color-black;
+  padding-bottom: 20rem;
+}
+
+.section-portfolio {
+  padding: 20rem 0;
+  background-image: linear-gradient(to bottom, $color-primary-dark, $color-primary-light);
+  background-size: cover;
+
+  margin-top: -14rem;
+
+}
+.section-experience{
+  background-color: $color-black;
+}

@@ -1,0 +1,63 @@
+.heading-primary{
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden; /*for fixing shaking elements*/
+  margin-bottom: 60px;
+  &-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation: moveInLeft 1.5s ease-out; /* short version*/
+  }
+  &-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.3px;
+    animation: moveInRight 1.5s ease-out;
+  }
+}
+
+.heading-secondary{
+  backface-visibility: hidden; /*for fixing shaking elements*/
+  margin-bottom: 60px;
+  &-main{
+    color: $color-white;
+    display: block;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    animation: moveInLeft 1.5s ease-out; /* short version*/
+  }
+  &-sub{
+    color: $color-grey-light-2;
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    animation: moveInRight 1.5s ease-out;
+  }
+}
+
+.heading-tertiary{
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-white;
+  letter-spacing: 35px;
+  padding-top: 40px;
+}
+.heading-quatriary{
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-white;
+}
+
+.paragraph{
+  font-size: $default-font-size;
+  &:not(:last-child){
+    margin-bottom: 3rem;
+  }
+
+}
