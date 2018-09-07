@@ -1,3 +1,37 @@
+.fas {
+  color: white;
+  font-size: 60px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all .2s;
+  position: relative;
+  margin-top: 20vh;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba($color-black, .2);
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba($color-black, .2);
+  }
+  //&::after {
+  //  content: ""; /*necessary for after + display!!!!*/
+  //  display: inline-block;
+  //  height: 100%;
+  //  width: 100%;
+  //  border-radius: 100px;
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  z-index: -1;
+  //  transition: all .4s;
+  //}
+  &-animated {
+    animation: moveInBtn .8s ease-out .75s; /* .75 is delay, at the end*/
+    animation-fill-mode: backwards; /*dodaje style z poczatku animacji, zeby nie bylo widac btn przed uruchomieniem animacji*/
+  }
+}
 .btn {
   &:link, .btn.visited {
     text-transform: uppercase;
@@ -8,6 +42,7 @@
     border: 1px solid $color-black;
     transition: all .2s;
     position: relative;
+    margin-top: 20vh;
   }
   &:hover {
 
@@ -22,7 +57,7 @@
   }
 
   &-white {
-    background-color: none;
+    background-color: transparent;
     color: $color-white;
   }
 
@@ -75,5 +110,6 @@
     transform: translateY(0px);
   }
 }
+
 
 

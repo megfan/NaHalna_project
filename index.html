@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/icon-font.css">
     <link rel="stylesheet" href="css/style.css">
@@ -13,17 +14,37 @@
     <title>Natours | Exciting tours for adventurous people</title>
 </head>
 <body>
+    <div class="navigation">
+        <input type="checkbox" class="nav__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="nav__button">
+            <span class="nav__icon">&nbsp;</span>
+        </label>
+        <div class="nav__background">&nbsp;</div>
+
+        <nav class="nav__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">Kilka slow</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Doswiadczenie</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Portfolio</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Kontakt</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+
     <header class="header">
         <div class="logo-box">
-            <img src="img/logo-white.png" alt="Logo" class="logo">
+            <img src="img/logo2.png" alt="Logo" class="logo">
         </div>
         <div class="text-box">
             <h1 class="heading-primary">
-                <span class="heading-primary-main">OUTDOORS</span>
-                <span class="heading-primary-sub">is where life happens</span>
+                <img src="img/logo2.png" alt="Logo" class="heading-primary">
+                <span class="heading-primary-sub">NaHalna - studio graficzne</span>
 
             </h1>
-            <a href="#" class="btn btn-white btn-animated">Discover our tours</a>
+            <i class="fas fa-angle-down"></i>
+            <!--<a href="#" class="btn btn-white btn-animated">Discover our tours</a>-->
         </div>
     </header>
         <main>
