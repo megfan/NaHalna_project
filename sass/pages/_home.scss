@@ -13,4 +13,14 @@
 }
 .section-experience{
   background-color: $color-black;
+
+}
+.project{
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+  opacity: 0;
+}
+.project.fade-in{
+  transform: translateY(0px);
+  opacity: 1;
 }
