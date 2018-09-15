@@ -1,20 +1,4 @@
-.fas {
-  color: white;
-  font-size: 60px;
-  text-decoration: none;
-  display: inline-block;
-  transition: all .2s;
-  position: relative;
-  margin-top: 20vh;
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba($color-black, .2);
-  }
-  &:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba($color-black, .2);
-  }
   //&::after {
   //  content: ""; /*necessary for after + display!!!!*/
   //  display: inline-block;
@@ -27,31 +11,34 @@
   //  z-index: -1;
   //  transition: all .4s;
   //}
-  &-animated {
-    animation: moveInBtn .8s ease-out .75s; /* .75 is delay, at the end*/
-    animation-fill-mode: backwards; /*dodaje style z poczatku animacji, zeby nie bylo widac btn przed uruchomieniem animacji*/
-  }
-}
 .btn {
-  &:link, .btn.visited {
+  &, &:link, .btn.visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 15px 40px;
     display: inline-block;
-    border-radius: 100px;
-    border: 1px solid $color-black;
     transition: all .2s;
     position: relative;
-    margin-top: 20vh;
+    background-color: $color-black;
+    border: 1px solid $color-white;
+    color: $color-white;
+    letter-spacing: .3rem;
+    margin-left: .4rem;
+    cursor: pointer;
+    @include respond(tab-port){
+
+    }
   }
   &:hover {
-
+    font-weight: 700;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba($color-black, .2);
+    box-shadow: 0 10px 20px rgba($color-black, .8);
     background-color: $color-black;
+    border: 2px solid $color-white;
+    color: $color-white;
   }
 
-  &:active {
+  &:active &:focus {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba($color-black, .2);
   }

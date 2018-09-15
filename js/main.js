@@ -21,12 +21,12 @@ $(document).ready(function(){
             // reverse: false
         })
             .setClassToggle(this, 'fade-in')
-            .addIndicators({
-                name: 'fade-scene',
-                colorTrigger: 'pink',
-                colorStart: 'yellow',
-                colorEnd: 'blue'
-            })
+            // .addIndicators({
+            //     name: 'fade-scene',
+            //     colorTrigger: 'pink',
+            //     colorStart: 'yellow',
+            //     colorEnd: 'blue'
+            // })
             .addTo(controller);
     })
 });

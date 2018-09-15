@@ -1,18 +1,29 @@
 
 .header {
-  height: 100vh;
+  height: 80vh;
   background-image: linear-gradient(to bottom, rgba($color-black,0.8),rgba($color-black,0.5)), url(../img/main_bcg.png);
   background-size: cover;
   background-position: center;
+  @include respond(tab-land) {
+    height: 70vh;
+  }
+  @include respond(phone) {
+    height: 60vh;
+  }
+
 
   & .logo-box{
     position: absolute;
-    top:40px;
-    left: 40px;
-    opacity: .1;
+    top:60px;
+    left: 60px;
   }
   & .logo{
-    height: 35px;
+    height: 50px;
+    position: fixed;
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 4rem;
+    }
   }
   & .text-box{
     position: absolute;
@@ -20,19 +31,76 @@
     left: 50%;
     transform: translate(-50%, -50%); /* wysrodkowanie obiektu wzgledem calej strony razem z topem i leftem*/
     text-align: center;
+    @include respond(tab-land) {
+      top:40%;
+    }
+    @include respond(phone) {
+      top:30%;
+    }
+
   }
 }
 
-.heading-primary{
-  height: 200px;
+.heading{
   backface-visibility: hidden; /*for fixing shaking elements*/
-  margin: 30px 0 20px 0;
-  animation: moveInTop 1s ease-out;
+  margin: 10vh 0 5vh 0;
+  @include respond(tab-land) {
+    margin: 0;
+  }
+  @include respond(phone) {
+    margin: 0;
+  }
+  &__logo{
+    height: 20rem;
+    animation: moveInTop 1s ease-out;
+    @include respond(phone) {
+      height: 9rem;
+    }
+  }
 
-}
-.heading-logo{
-  height: 200px;
-  z-index: 50;
+  &__sub{
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $color-white;
+    padding-top: 2rem;
+    letter-spacing: 1.2rem;
+    animation: moveInTop 1s ease-out .5s;
+    animation-fill-mode: backwards;
+    @include respond(phone) {
+      font-size: 2rem;
+      padding-top: 1rem;
+      letter-spacing: 1rem;
+    }
+  }
 }
 
+.fas {
+  color: white;
+  font-size: 6rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all .2s;
+  position: relative;
+  margin-top: 10vh;
+  @include respond(tab-land) {
+    margin-top: 6vh;
+  }
+  @include respond(phone) {
+    margin-top: 1vh;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba($color-black, .2);
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba($color-black, .2);
+  }
+  &-animated {
+    animation: moveInBtn .8s ease-out .75s; /* .75 is delay, at the end*/
+    animation-fill-mode: backwards; /*dodaje style z poczatku animacji, zeby nie bylo widac btn przed uruchomieniem animacji*/
+  }
+}
 

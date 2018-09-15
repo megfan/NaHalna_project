@@ -1,20 +1,38 @@
 .section-portfolio {
-  padding: 10rem 0 10rem 0;
+  padding: 10rem;
   background-image: linear-gradient(to bottom, $color-primary-dark, $color-primary-light);
   background-size: cover;
 
-  margin-top: -14rem;
-
+  //margin-top: -14rem;
+  @include respond(tab-land) {
+    padding: 6rem;
+  }
+  @include respond(phone) {
+    padding: 4rem;
+  }
 }
 .section-experience{
   background-color: $color-black;
+  padding: 10rem;
 
+  @include respond(tab-land) {
+    padding: 6rem;
+  }
+  @include respond(phone) {
+    padding: 2rem;
+  }
 }
 
 .section-about{
-  padding: 6rem;
+  padding: 14rem;
   background-color: $color-primary;
   position: relative;
+  @include respond(tab-land) {
+    padding: 6rem;
+  }
+  @include respond(phone) {
+    padding: 4rem;
+  }
 }
 .project{
   transform: translateY(50px);
@@ -25,3 +43,43 @@
   transform: translateY(0px);
   opacity: 1;
 }
+
+.section-contact {
+  padding: 15rem 0;
+  background-image: $color-grey-dark;
+  @include respond(phone) {
+    padding: 7rem 0;
+  }
+}
+
+.contact {
+  background-image: linear-gradient(105deg, rgba($color-primary, .9) 0%,rgba($color-primary, .9) 60%,  transparent 60%) ,url(../img/main_bcg.png);
+  background-size: 100%;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .8);
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(105deg, rgba($color-primary, .9) 0%,rgba($color-primary, .9) 70%,  transparent 70%) ,url(../img/main_bcg.png);
+    background-size: cover;
+  }
+  @include respond(tab-port) {
+    background-image: linear-gradient(to right, rgba($color-primary, .6) 0%,rgba($color-primary, .6) 100%) ,url(../img/main_bcg.png);
+
+  }
+
+
+  &__form{
+    width: 50%;
+    padding: 5rem 0 5rem 10rem;
+
+    @include respond(tab-land) {
+      width: 70%;
+      padding: 5rem 0 5rem 7rem;
+    }
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+      padding: 5rem 7rem;
+    }
+  }
+}
+

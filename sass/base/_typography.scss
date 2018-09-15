@@ -1,35 +1,62 @@
+h1{
+  color: $color-white;
+}
+
 .heading-primary{
   color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden; /*for fixing shaking elements*/
   margin-bottom: 60px;
+
   &-sub{
     display: block;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.3px;
-    animation: moveInTop 1.5s ease-out .8s;
+    animation: moveInTop 1s ease-out .4s;
     animation-fill-mode: backwards;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 4rem;
+    }
   }
 }
 
 .heading-secondary{
   backface-visibility: hidden; /*for fixing shaking elements*/
-  margin-bottom: 60px;
+
   &-main{
     color: $color-white;
     display: block;
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 400;
-    letter-spacing: 10px;
+    letter-spacing: 1rem;
     animation: moveInLeft 1.5s ease-out; /* short version*/
+
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+    @include respond(tab-land) {
+      letter-spacing: .5rem;
+      font-size: 3rem;
+    }
   }
   &-sub{
     color: $color-grey-light-2;
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    animation: moveInRight 1.5s ease-out;
+    animation: moveInRight 1s ease-out;
+
+    @include respond(tab-land) {
+      font-size: 1.5rem;
+    }
+    @include respond(tab-port) {
+      color: $color-grey-light-1;
+    }
+
   }
 }
 
@@ -46,6 +73,13 @@
   font-weight: 700;
   text-transform: uppercase;
   color: $color-white;
+
+  @include respond(tab-port) {
+    font-size: 2rem;
+  }
+  @include respond(phone) {
+     font-size: 2rem;
+   }
 }
 
 .paragraph{

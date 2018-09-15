@@ -1,18 +1,89 @@
 .row-portfolio{
   position: relative;
-  height: 35vh;
+  height: 22vh;
+  @include respond(tab-port){
+    height: 39vh;
+  }
 
 }
 .portfolio-box {
-  transition: all .2s;
-  height: 12rem;
+  height: 20rem;
   position: relative;
-  background-color: $color-white;
-
-  &__pic {
-    width: 100%;
+  display: block;
+  @include respond(tab-port){
+    height: 28rem;
   }
-  &:hover {
+  @include respond(phone){
     height: 18rem;
   }
+
+  &__pic {
+    height: 13rem;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    transition: all .2s;
+    transform: scale(.98);
+    filter: brightness(80%);
+    @include respond(tab-port){
+      height: 22rem;
+      transform: scale(1);
+      filter: brightness(100%);
+    }
+    @include respond(phone){
+      height: 12rem;
+      transform: scale(1);
+      filter: brightness(100%);
+    }
+    &__text {
+      position: absolute;
+      margin: auto 0;
+      transform: translateY(80px);
+      color: $color-white;
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: .5rem;
+      text-align: left;
+      opacity: 0;
+      transition: all .2s;
+      backface-visibility: hidden;
+      margin-top: 5rem;
+      @include respond(tab-port){
+        margin-top: 11rem;
+        opacity: 1;
+        transform: translateY(100px);
+      }
+      @include respond(phone){
+        opacity: 1;
+        transform: translateY(100px);
+        margin-top: 1rem;
+      }
+    }
+    &:hover &__text {
+       opacity: 1;
+       transform: translateY(100px);
+     }
+    &:hover{
+      transform: scale(1);
+      filter: brightness(100%);
+    }
+    &--1 {
+      background-image: url(../img/1.jpg);
+    }
+    &--2 {
+      background-image: url(../img/2.jpg);
+    }
+    &--3 {
+      background-image: url(../img/3.jpg);
+    }
+    &--4 {
+      background-image: url(../img/4.png);
+    }
+
+  }
 }
+
+
+
+
