@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
+
     <link rel="stylesheet" href="css/icon-font.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
@@ -23,17 +24,17 @@
 
         <nav class="nav__nav">
             <ul class="nav__list">
-                <li class="nav__item"><a href="#" class="nav__link">Kilka slow</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Doswiadczenie</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Portfolio</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Kontakt</a></li>
-
+                <li data-scroll class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li data-scroll class="nav__item"><a href="#experience" class="nav__link">Doswiadczenie</a></li>
+                <li data-scroll class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                <li data-scroll class="nav__item"><a href="#about" class="nav__link">Kilka slow</a></li>
+                <li data-scroll class="nav__item"><a href="#contact" class="nav__link">Kontakt</a></li>
             </ul>
         </nav>
     </div>
 
 
-    <header class="header">
+    <header class="header" id="home">
         <!--<div class="logo-box">-->
             <!--<img src="img/logox.png" alt="Logo" class="logo">-->
         <!--</div>-->
@@ -43,11 +44,11 @@
                 <span class="heading__sub">NaHalna - studio graficzne</span>
 
             </h1>
-            <i class="fas fa-angle-down"></i>
+            <i class="fas fa-angle-down" id="arrow"></i>
         </div>
     </header>
         <main>
-                <section class="section-experience">
+                <section class="section-experience" id="experience">
                     <div class="u-center-text u-margin-bottom-big">
                         <h1 class="heading-secondary">
                             <span class="heading-secondary-main">01.Doswiadczenie</span>
@@ -110,7 +111,7 @@
 
             </section>
 
-            <section class="section-portfolio">
+            <section class="section-portfolio" id="portfolio">
                 <div class="u-center-text u-margin-bottom-big">
                     <h1 class="heading-secondary">
                         <span class="heading-secondary-main">02.Portfolio</span>
@@ -121,18 +122,18 @@
                 <div class="row-portfolio">
                     <div class="col-1-of-4 portfolio-box">
                         <div class="portfolio-box__pic portfolio-box__pic--1">
-                            <figcaption class="portfolio-box__pic__text">Tatra Glame / 2017</figcaption>
+                            <figcaption class="portfolio-box__pic__text">Tatra Glame</figcaption>
                         </div>
 
                     </div>
                     <div class="col-1-of-4 portfolio-box">
                         <div class="portfolio-box__pic portfolio-box__pic--2">
-                            <figcaption class="portfolio-box__pic__text">Tatra Glame / 2017</figcaption>
+                            <figcaption class="portfolio-box__pic__text">PKP / folder</figcaption>
                         </div>
                     </div>
                     <div class="col-1-of-4 portfolio-box">
                         <div class="portfolio-box__pic portfolio-box__pic--3">
-                            <figcaption class="portfolio-box__pic__text">Tatra Glame / 2017</figcaption>
+                            <figcaption class="portfolio-box__pic__text">Artimar Bizuteria artystyczna</figcaption>
                         </div>
                     </div>
                     <div class="col-1-of-4 portfolio-box">
@@ -166,8 +167,9 @@
                 </div>
 
             </div>
+
         </section>
-        <section class="section-about">
+        <section class="section-about" id="about">
             <div class="bg-video">
                 <video class="bg-video__content" autoplay muted loop>
                     <source src="img/video.webm" type="video/webm">
@@ -200,7 +202,7 @@
             </div>
         </section>
 
-        <section class="section-contact">
+        <section class="section-contact" id="contact">
             <div class="row">
                 <div class="contact">
                     <div class="contact__form">
@@ -260,6 +262,33 @@
         </div>
     </footer>
 
+     <div class="wrap">
+
+            <div id="slider">
+                <div class="arrow arrow__left"></div>
+                <div class="slide slide__1">
+                    <div class="slide__content">
+                        1
+                    </div>
+                </div>
+                <div class="slide slide__2">
+                    <div class="slide__content">
+                        2
+                    </div>
+                </div>
+                <div class="slide slide__3">
+                    <div class="slide__content">
+                        3
+                    </div>
+                </div>
+                <div class="arrow arrow__right"></div>
+            </div>
+
+     </div>
+
+
+
+
     <!--<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>-->
 
     <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>-->
@@ -267,8 +296,8 @@
     <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>-->
     <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>-->
     <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>-->
-
-    <!--<script src="js/main.js"></script>-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

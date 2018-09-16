@@ -1,32 +1,124 @@
 $(document).ready(function(){
 
-    var controller = new ScrollMagic.Controller();
+    // var controller = new ScrollMagic.Controller();
 
 
-    var pinIntroScene = new ScrollMagic.Scene({
-        triggerElement: '.text-box',
-        // triggerHook: 0,
-        duration: '10%'
+    // var pinIntroScene = new ScrollMagic.Scene({
+    //     triggerElement: '.text-box',
+    //     // triggerHook: 0,
+    //     duration: '10%'
 
-    })
-        .setPin('.text-box', {pushFollowers:false})
-        .addTo(controller);
+    // })
+    //     .setPin('.text-box', {pushFollowers:false})
+    //     .addTo(controller);
 
-    $('.project').each(function () {
-        var ourScene = new ScrollMagic.Scene({
+    // $('.project').each(function () {
+    //     var ourScene = new ScrollMagic.Scene({
 
-            triggerElement: this.children[0],
-            duration: '80%',
-            // triggerHook: 0.9,
-            // reverse: false
-        })
-            .setClassToggle(this, 'fade-in')
-            // .addIndicators({
-            //     name: 'fade-scene',
-            //     colorTrigger: 'pink',
-            //     colorStart: 'yellow',
-            //     colorEnd: 'blue'
-            // })
-            .addTo(controller);
-    })
+    //         triggerElement: this.children[0],
+    //         duration: '80%',
+    //         // triggerHook: 0.9,
+    //         // reverse: false
+    //     })
+    //         .setClassToggle(this, 'fade-in')
+    //         // .addIndicators({
+    //         //     name: 'fade-scene',
+    //         //     colorTrigger: 'pink',
+    //         //     colorStart: 'yellow',
+    //         //     colorEnd: 'blue'
+    //         // })
+    //         .addTo(controller);
+    // })
+
+
+    //Slider////////
+
+
+    let sliderImages = document.querySelectorAll('.slide'),
+        arrowRight = document.querySelector('.arrow__right'),
+        arrowLeft = document.querySelector('.arrow__left'),
+
+        current = 0;
+    console.log(arrowLeft, arrowRight);
+
+//CLear images
+
+    function reset() {
+        for(let i = 0; i < sliderImages.length; i++){
+            sliderImages[i].style.display = 'none';
+        }
+    }
+
+//Slide init
+
+    function startSlide() {
+        reset();
+        sliderImages[0].style.display = 'block';
+    }
+
+//Show prev
+
+    function slideLeft() {
+        reset();
+        sliderImages[current - 1].style.display = 'block';
+        current--;
+    }
+//Left arrow click
+
+    arrowLeft.addEventListener('click', function () {
+        if(current === 0){
+            current = sliderImages.length;
+        }
+        slideLeft();
+    });
+
+//Show next
+
+    function slideRight() {
+        reset();
+        sliderImages[current + 1].style.display = 'block';
+        current++;
+    }
+//Right arrow click
+    arrowRight.addEventListener('click', function () {
+        if(current === sliderImages.length){
+            current = 0;
+        }
+        slideRight();
+    });
+
+    startSlide();
+
+
+
+
+
+
+
+
+
+
+//scrolling
+
+
+    var inputMenu = document.getElementById('navi-toggle');
+    console.log(inputMenu);
+
+    $(".nav__item").click(function(){
+        inputMenu.checked = false;
+
+
+        console.log('njnjn')
+    });
+
+    $('#arrow').on('click', function(event) {
+
+        $('html, body').animate({
+            scrollTop: $("#experience").offset().top
+        }, 1000);
+    });
+
+
+
 });
+
