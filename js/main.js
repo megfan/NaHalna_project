@@ -32,20 +32,25 @@ $(document).ready(function(){
 
 
     //Slider////////
+    
 
 
     let sliderImages = document.querySelectorAll('.slide'),
+        slider = document.querySelector('.wrap'),
         arrowRight = document.querySelector('.arrow__right'),
         arrowLeft = document.querySelector('.arrow__left'),
+        close = document.querySelector('.nav__icon__slider'),
+        picBtn = document.querySelectorAll('.folio'),
 
         current = 0;
-    console.log(arrowLeft, arrowRight);
+    console.log(picBtn);
 
 //CLear images
 
     function reset() {
         for(let i = 0; i < sliderImages.length; i++){
             sliderImages[i].style.display = 'none';
+        
         }
     }
 
@@ -54,6 +59,7 @@ $(document).ready(function(){
     function startSlide() {
         reset();
         sliderImages[0].style.display = 'block';
+
     }
 
 //Show prev
@@ -87,32 +93,34 @@ $(document).ready(function(){
         slideRight();
     });
 
-    startSlide();
+//Start slider
+    function pictureClick(){
 
+        slider.style.display = 'none';
+        for(let i = 0; i < picBtn.length; i++){
+        picBtn[i].addEventListener('click', function(){
+            slider.style.display = 'block';
+            startSlide();
+            console.log('dziala');
+        });
+    }
+}
+//Close slider
+    close.addEventListener('click', function(){
+        slider.style.display = 'none';
+    });
 
-
-
-
-
-
-
+ pictureClick();
 
 
 //scrolling
-
-
     var inputMenu = document.getElementById('navi-toggle');
-    console.log(inputMenu);
 
     $(".nav__item").click(function(){
         inputMenu.checked = false;
-
-
-        console.log('njnjn')
     });
 
     $('#arrow').on('click', function(event) {
-
         $('html, body').animate({
             scrollTop: $("#experience").offset().top
         }, 1000);

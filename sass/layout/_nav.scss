@@ -96,7 +96,7 @@
     &::after{
       content: "";
       position: absolute;
-      left: 0;
+      right: 0;
       transition: all .2s;
     }
     &::before{
@@ -126,4 +126,41 @@
     top: 0;
     transform: rotate(-135deg);
   }
+}
+
+.nav__icon__slider{
+    margin-top: 2.4rem;
+    margin-right: 2.4rem;
+    position: fixed;
+    top: 4rem;
+    right: 4rem;
+    &,
+    &::before,
+    &::after{
+      width: 3rem;
+      height: .3rem;
+      background-color: $color-white;
+      display: inline-block;
+    }
+    &::before,
+    &::after{
+      content: "";
+      position: absolute;
+      right: 0;
+      transition: all .2s;
+      z-index: 20;
+    }
+    &{
+      background-color: transparent;
+    }
+    &::before{
+      top: 17rem;
+      right: 24rem;
+      transform: rotate(135deg);
+    }
+    &::after{
+      top: 17rem;
+      right: 24rem;
+      transform: rotate(-135deg);
+    }
 }
