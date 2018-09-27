@@ -20,4 +20,5 @@ soon :)
 
 * **Margaret Staszewska**
 
-![screenshot-localhost-8080-2018 09 27-14-38-30](https://user-images.githubusercontent.com/35031023/46147243-4fbbe700-c265-11e8-8e22-3ed7d9333cf0.png)
+
+![screenshot-127 0 0 1 8080-2018-09-27-13-17-21](https://user-images.githubusercontent.com/35031023/46147922-197f6700-c267-11e8-852f-484395901076.png)
