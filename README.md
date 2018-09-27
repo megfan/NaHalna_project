@@ -19,3 +19,5 @@ soon :)
 ## Authors
 
 * **Margaret Staszewska**
+
+![screencast--2018 09 27-14-36-53](https://user-images.githubusercontent.com/35031023/46147376-a88b7f80-c265-11e8-882d-9f3b76cf6302.gif)
