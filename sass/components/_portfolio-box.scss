@@ -23,7 +23,8 @@
           // }
     &__pic {
           width: 100%;
-          background-size: cover;
+          height: 24rem;
+          background-size: contain;
           z-index: 0;
         }
     &__text {
