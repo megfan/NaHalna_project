@@ -6,7 +6,7 @@ I also included Font Awesome and Google Fonts.
 Website is fully responsive.
 
 ## View Demo:
-soon :)
+[NaHalna](https://megfan.github.io/NaHalna_project/)
 
 ## Built With
 
